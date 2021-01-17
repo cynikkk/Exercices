@@ -1,3 +1,3 @@
-## Exercices Python
+## Python
 
-Sur practicepython.org/exercises/
+Exercices based on practicepython.org/exercises/
