@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    // Générer mot caché
+    // Générer mot caché via disctionnaire
     // Initialiser vie (12 essais)
     // Si lettre se trouve plusieurs fois afficher toutes les occurences
     // Si lettre dans mot alors afficher lettre sinon vie--
