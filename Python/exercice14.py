@@ -7,7 +7,7 @@ def removeDuplicates1(oldList):
     return newList
 
 def removeDuplicates2(oldList):
-    # ...
+    oldList = set(oldList)
     return oldList
 
 a = [1, 1, 2, 1, 3, 3, 2, 4, 5, 6, 5, 4]
