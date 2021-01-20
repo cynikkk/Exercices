@@ -3,8 +3,6 @@ import random
 """ TODO
 # Debug l'overflow par rapport à l'index de specialCharList
 # Améliorer UI et options de génération
-# Enlever les espaces entre les chars
-# Régler problème randomNumber toujours le même
 """
 
 lowercaseCharList = []
@@ -17,29 +15,26 @@ for letter in range(65, 91):
 
 specialCharList = ['`','~','!','@','#','$','%','^','&','*','(',')','_','-','+','=','{','[','}','}','|','\\',':',';','"','\'','<',',','>','.','?','/']
 
-randomNumber = random.randint(0, 9)
-
-# Générer pswd via lower, upper, numbers, special chars
 def main():
-    # Demander nombre de caractères dans le pswd
     passwordLenght = int(input("Insert lenght of your password : "))
     passwordGenerated = []
 
-    for char in range(1, passwordLenght + 1):
+    for i in range(1, passwordLenght + 1):
         choice = random.randint(1, 4)
         if choice == 1:
-            passwordGenerated.append(lowercaseCharList[random.randint(1, len(lowercaseCharList))])
+            passwordGenerated.append(lowercaseCharList[random.randint(1, 26)])
         elif choice == 2:
-            passwordGenerated.append(uppercaseCharList[random.randint(1, len(uppercaseCharList))])
+            passwordGenerated.append(uppercaseCharList[random.randint(1, 26)])
         elif choice == 3:
-            passwordGenerated.append(specialCharList[random.randint(1, len(specialCharList))])
+            passwordGenerated.append(specialCharList[random.randint(1, 32)])
         else:
-            passwordGenerated.append(randomNumber)
+            passwordGenerated.append(random.randint(0, random.randint(9, 55)))
     
-    passwordGenerated = ' '.join([str(item) for item in passwordGenerated])
-    print("Password : " + str(passwordGenerated))
-    print(len(specialCharList))
-    
+    # Convert into string
+    passwordGenerated = "".join([str(item) for item in passwordGenerated])
 
+    print("Password : " + str(passwordGenerated))
+
+    
 if __name__ == "__main__":
     main()
