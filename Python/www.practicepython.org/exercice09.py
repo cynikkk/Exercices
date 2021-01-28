@@ -2,9 +2,9 @@ import random
 
 randomNumber = random.randint(1, 9)
 
-continuePlaying = "y"
+continuePlaying = ''
 
-while continuePlaying != "n":
+while continuePlaying != 'n':
     number = int(input("Guess the number (1-9): "))
 
     if number == randomNumber:
